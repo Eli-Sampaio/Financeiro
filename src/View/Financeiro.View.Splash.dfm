@@ -25,10 +25,6 @@ object FormSplash: TFormSplash
     Color = clGreen
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -2
-    ExplicitTop = -2
-    ExplicitWidth = 639
-    ExplicitHeight = 303
     object Image1: TImage
       AlignWithMargins = True
       Left = 3
@@ -324,25 +320,23 @@ object FormSplash: TFormSplash
     end
     object ProgressBar1: TProgressBar
       Left = 0
-      Top = 664
+      Top = 688
       Width = 1102
-      Height = 102
+      Height = 78
       Align = alBottom
+      Step = 1
       TabOrder = 0
-      ExplicitTop = 408
-      ExplicitWidth = 956
     end
     object Panel2: TPanel
       Left = 0
-      Top = 504
+      Top = 528
       Width = 1102
       Height = 160
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitTop = 425
-      ExplicitWidth = 1108
-      object Label2: TLabel
+      ExplicitTop = 504
+      object LabelStatusProgressBar: TLabel
         AlignWithMargins = True
         Left = 3
         Top = 70
@@ -367,19 +361,17 @@ object FormSplash: TFormSplash
       Left = 0
       Top = 308
       Width = 1102
-      Height = 196
+      Height = 220
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitTop = 311
-      ExplicitWidth = 1108
-      ExplicitHeight = 117
+      ExplicitHeight = 196
       object Label1: TLabel
         AlignWithMargins = True
         Left = 3
         Top = 70
         Width = 1096
-        Height = 123
+        Height = 147
         Margins.Top = 70
         Align = alClient
         Alignment = taCenter
@@ -392,10 +384,15 @@ object FormSplash: TFormSplash
         Font.Style = []
         ParentColor = False
         ParentFont = False
-        ExplicitTop = 3
         ExplicitWidth = 266
         ExplicitHeight = 39
       end
     end
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 920
+    Top = 128
   end
 end
