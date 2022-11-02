@@ -17,9 +17,14 @@ type
     Panel3: TPanel;
     Label1: TLabel;
     Timer1: TTimer;
+    Panel4: TPanel;
+    ImageCarregaDependencia: TImage;
+    ImageConectaDb: TImage;
+    ImageCarregaConfig: TImage;
+    ImageInciaSistema: TImage;
     procedure Timer1Timer(Sender: TObject);
   private
-    { Private declarations }
+    procedure AtualizaStatus(Mensagem: String; Image: TImage);
   public
     { Public declarations }
   end;
@@ -31,16 +36,22 @@ implementation
 
 {$R *.dfm}
 
+procedure TFormSplash.AtualizaStatus(Mensagem: String; Image: TImage);
+begin
+  LabelStatusProgressBar.Caption := Mensagem;
+  Image.Visible := True;
+end;
+
 procedure TFormSplash.Timer1Timer(Sender: TObject);
 begin
   if ProgressBar1.Position <= 100 then
   begin
     ProgressBar1.StepIt;
     case ProgressBar1.Position of
-      10 : LabelStatusProgressBar.Caption := 'Carregando Dependências...';
-      25 : LabelStatusProgressBar.Caption := 'Conectando ao banco de dados...';
-      50 : LabelStatusProgressBar.Caption := 'Carregando as Configurações...';
-      75 : LabelStatusProgressBar.Caption := 'Iniciando o Sistema...';
+      10 : AtualizaStatus ('Carregando Dependências...', ImageCarregaDependencia);
+      25 : AtualizaStatus ('Conectando ao banco de dados...', ImageConectaDb);
+      50 : AtualizaStatus ('Carregando as Configurações...', ImageCarregaConfig);
+      75 : AtualizaStatus ('Iniciando o Sistema...', ImageInciaSistema);
     end;
   end;
   if ProgressBar1.Position = 100 then
