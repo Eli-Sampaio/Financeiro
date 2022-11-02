@@ -1,0 +1,38 @@
+unit Financeiro.View.Splash;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls,
+  dxGDIPlusClasses, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TFormSplash = class(TForm)
+    Panel1: TPanel;
+    Image1: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    ProgressBar1: TProgressBar;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FormSplash: TFormSplash;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFormSplash.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if key = VK_ESCAPE then
+    Application.Terminate;
+end;
+
+end.

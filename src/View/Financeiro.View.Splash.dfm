@@ -1,24 +1,25 @@
 object FormSplash: TFormSplash
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
-  ClientHeight = 309
-  ClientWidth = 645
+  BorderStyle = bsDialog
+  ClientHeight = 766
+  ClientWidth = 1102
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   OldCreateOrder = False
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 639
-    Height = 303
+    Left = 0
+    Top = 0
+    Width = 1102
+    Height = 766
     Align = alClient
     BevelOuter = bvNone
     Color = clGreen
@@ -26,11 +27,14 @@ object FormSplash: TFormSplash
     TabOrder = 0
     ExplicitLeft = -2
     ExplicitTop = -2
+    ExplicitWidth = 639
+    ExplicitHeight = 303
     object Image1: TImage
-      Left = 0
-      Top = 0
-      Width = 639
-      Height = 150
+      AlignWithMargins = True
+      Left = 3
+      Top = 20
+      Width = 1096
+      Height = 285
       Margins.Top = 20
       Align = alTop
       Center = True
@@ -316,56 +320,82 @@ object FormSplash: TFormSplash
         7F18F8B8AA8DD968280000000049454E44AE426082}
       Proportional = True
       Stretch = True
-      ExplicitTop = -3
-    end
-    object Label1: TLabel
-      AlignWithMargins = True
-      Left = 3
-      Top = 245
-      Width = 633
-      Height = 24
-      Align = alBottom
-      Alignment = taCenter
-      Caption = 'Carregando...'
-      Color = clGreen
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -20
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-      ExplicitTop = 250
-      ExplicitWidth = 121
-    end
-    object Label2: TLabel
-      AlignWithMargins = True
-      Left = 3
-      Top = 153
-      Width = 633
-      Height = 86
-      Align = alClient
-      Alignment = taCenter
-      Caption = 'Sistema Financeiro'
-      Color = clGreen
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -32
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-      ExplicitTop = 159
-      ExplicitWidth = 266
-      ExplicitHeight = 39
+      ExplicitWidth = 950
     end
     object ProgressBar1: TProgressBar
       Left = 0
-      Top = 272
-      Width = 639
-      Height = 31
+      Top = 664
+      Width = 1102
+      Height = 102
       Align = alBottom
       TabOrder = 0
+      ExplicitTop = 408
+      ExplicitWidth = 956
+    end
+    object Panel2: TPanel
+      Left = 0
+      Top = 504
+      Width = 1102
+      Height = 160
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 1
+      ExplicitTop = 425
+      ExplicitWidth = 1108
+      object Label2: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 70
+        Width = 1096
+        Height = 29
+        Margins.Top = 70
+        Align = alTop
+        Alignment = taCenter
+        Caption = 'Carregando...'
+        Color = clGreen
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 144
+      end
+    end
+    object Panel3: TPanel
+      Left = 0
+      Top = 308
+      Width = 1102
+      Height = 196
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 2
+      ExplicitTop = 311
+      ExplicitWidth = 1108
+      ExplicitHeight = 117
+      object Label1: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 70
+        Width = 1096
+        Height = 123
+        Margins.Top = 70
+        Align = alClient
+        Alignment = taCenter
+        Caption = 'Sistema Financeiro'
+        Color = clGreen
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -32
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitTop = 3
+        ExplicitWidth = 266
+        ExplicitHeight = 39
+      end
     end
   end
 end

@@ -1,9 +1,10 @@
 object FrmPrincipal: TFrmPrincipal
   Left = 0
   Top = 0
+  BorderStyle = bsSingle
   Caption = 'Financeiro'
-  ClientHeight = 536
-  ClientWidth = 1045
+  ClientHeight = 546
+  ClientWidth = 1055
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,8 +13,23 @@ object FrmPrincipal: TFrmPrincipal
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
+  Position = poDesktopCenter
+  WindowState = wsMaximized
+  OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1055
+    Height = 546
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 440
+    ExplicitTop = 280
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+  end
   object MainMenu: TMainMenu
     Left = 464
     Top = 216

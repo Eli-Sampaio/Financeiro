@@ -1,0 +1,52 @@
+object FrmPrincipal: TFrmPrincipal
+  Left = 0
+  Top = 0
+  BorderStyle = bsNone
+  Caption = 'Financeiro'
+  ClientHeight = 575
+  ClientWidth = 1061
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  WindowState = wsMaximized
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1061
+    Height = 575
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 440
+    ExplicitTop = 280
+    ExplicitWidth = 185
+    ExplicitHeight = 41
+    object SpeedButton1: TSpeedButton
+      Left = 920
+      Top = 464
+      Width = 127
+      Height = 102
+    end
+  end
+  object MainMenu: TMainMenu
+    Left = 464
+    Top = 216
+    object Cadastros1: TMenuItem
+      Caption = 'Cadastros'
+    end
+    object Cadastros2: TMenuItem
+      Caption = 'Relat'#243'rios'
+    end
+    object Ajuda1: TMenuItem
+      Caption = 'Ajuda'
+    end
+  end
+end
