@@ -345,7 +345,6 @@ object FormSplash: TFormSplash
         Margins.Top = 70
         Align = alTop
         Alignment = taCenter
-        Caption = 'Carregando...'
         Color = clGreen
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWhite
@@ -354,7 +353,7 @@ object FormSplash: TFormSplash
         Font.Style = []
         ParentColor = False
         ParentFont = False
-        ExplicitWidth = 144
+        ExplicitWidth = 8
       end
     end
     object Panel3: TPanel

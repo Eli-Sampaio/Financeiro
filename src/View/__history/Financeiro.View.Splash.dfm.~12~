@@ -1,9 +1,9 @@
 object FormSplash: TFormSplash
   Left = 0
   Top = 0
-  BorderStyle = bsNone
-  ClientHeight = 516
-  ClientWidth = 962
+  BorderStyle = bsDialog
+  ClientHeight = 766
+  ClientWidth = 1102
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,31 +12,24 @@ object FormSplash: TFormSplash
   Font.Style = []
   KeyPreview = True
   OldCreateOrder = False
-  Position = poDefault
-  WindowState = wsMaximized
-  OnKeyDown = FormKeyDown
+  Position = poDesktopCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
-    AlignWithMargins = True
-    Left = 3
-    Top = 3
-    Width = 956
-    Height = 510
+    Left = 0
+    Top = 0
+    Width = 1102
+    Height = 766
     Align = alClient
     BevelOuter = bvNone
     Color = clGreen
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = -2
-    ExplicitTop = -2
-    ExplicitWidth = 639
-    ExplicitHeight = 303
     object Image1: TImage
       AlignWithMargins = True
       Left = 3
       Top = 20
-      Width = 950
+      Width = 1096
       Height = 285
       Margins.Top = 20
       Align = alTop
@@ -323,53 +316,82 @@ object FormSplash: TFormSplash
         7F18F8B8AA8DD968280000000049454E44AE426082}
       Proportional = True
       Stretch = True
-    end
-    object Label1: TLabel
-      AlignWithMargins = True
-      Left = 3
-      Top = 439
-      Width = 950
-      Height = 41
-      Align = alTop
-      Alignment = taCenter
-      Caption = 'Carregando...'
-      Color = clGreen
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -20
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
-      ExplicitTop = 360
-    end
-    object Label2: TLabel
-      AlignWithMargins = True
-      Left = 3
-      Top = 311
-      Width = 950
-      Height = 122
-      Align = alTop
-      Alignment = taCenter
-      Caption = 'Sistema Financeiro'
-      Color = clGreen
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWhite
-      Font.Height = -32
-      Font.Name = 'Tahoma'
-      Font.Style = []
-      ParentColor = False
-      ParentFont = False
+      ExplicitWidth = 950
     end
     object ProgressBar1: TProgressBar
       Left = 0
-      Top = 483
-      Width = 956
-      Height = 27
-      Align = alClient
+      Top = 688
+      Width = 1102
+      Height = 78
+      Align = alBottom
+      Step = 1
       TabOrder = 0
-      ExplicitTop = 446
-      ExplicitHeight = 67
     end
+    object Panel2: TPanel
+      Left = 0
+      Top = 528
+      Width = 1102
+      Height = 160
+      Align = alBottom
+      BevelOuter = bvNone
+      TabOrder = 1
+      ExplicitTop = 504
+      object LabelStatusProgressBar: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 70
+        Width = 1096
+        Height = 29
+        Margins.Top = 70
+        Align = alTop
+        Alignment = taCenter
+        Color = clGreen
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -24
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 8
+      end
+    end
+    object Panel3: TPanel
+      Left = 0
+      Top = 308
+      Width = 1102
+      Height = 220
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 2
+      ExplicitHeight = 196
+      object Label1: TLabel
+        AlignWithMargins = True
+        Left = 3
+        Top = 70
+        Width = 1096
+        Height = 147
+        Margins.Top = 70
+        Align = alClient
+        Alignment = taCenter
+        Caption = 'Sistema Financeiro'
+        Color = clGreen
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWhite
+        Font.Height = -32
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentColor = False
+        ParentFont = False
+        ExplicitWidth = 266
+        ExplicitHeight = 39
+      end
+    end
+  end
+  object Timer1: TTimer
+    Interval = 50
+    OnTimer = Timer1Timer
+    Left = 920
+    Top = 128
   end
 end
